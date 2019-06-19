@@ -52,6 +52,29 @@ var employees = [
 
 //Code Here
 
+function employeeUpdater (){
+  for(var i = 0; i < employees.length; i++){
+  if (employees[i].firstName === 'Theo'){
+    employees.splice(i,1)
+  } else {if (employees[i].firstName === 'Lorie'){
+    employees[i].department = 'HR'
+      }
+    }
+  } return employees;
+}
+
+// READ UP SPLICE METHOD!! & Review
+/* To self: Explaination of splice in this function;
+The syntax of splice is splice(index, how many, item 1, item 2, and so on)
+The "i" is default index for when it finds the object with "Theo"
+The "1" is how many elements to remove and this case, it's just the "Theo" object
+Splice.method returns the NEW ARRAY without Theo which is why "delete.employee[i]" did not work in my OG answer.
+Instructions specified an updated employee arrray but OG delete answer console.log'd the array with an empty element 
+instead of an updated array.
+*/
+
+// employeeUpdater(employees);
+// console.log(employees);
 
 
 ////////// PROBLEM 2 //////////
@@ -70,6 +93,19 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
 
 //Code Here
 
+
+
+function removeDuplicates(workplaceAccidents){
+  let newArr = [];
+  newArr.push([...new Set(workplaceAccidents)]);
+  // console.log(newArr)
+  return newArr
+}; 
+
+//ASK QUESTION
+// removeDuplicates(workplaceAccidents)
+// console.log(newArr)
+// // console.log()
 
 
 ////////// PROBLEM 3 //////////
@@ -97,9 +133,8 @@ var cat = {
 */
 
 //Code Here
-var grumpyActivity;
-var fluffy2ndFriend;
-
+var grumpyActivity = cat.catFriends[0].activities[1];
+var fluffy2ndFriend = cat.catFriends[1].name;
 
 
 ////////// PROBLEM 4 //////////

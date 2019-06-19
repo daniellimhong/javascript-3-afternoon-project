@@ -11,13 +11,13 @@
   In the example below, we are accessing the property values. Uncomment the code below, run it and look at what prints in the console.
 */
 
-// var values = {
-//   one: 'These',
-//   two: ' are',
-//   three: ' the',
-//   four: ' property',
-//   five: ' values.'
-// } 
+var values = {
+  one: 'These',
+  two: ' are',
+  three: ' the',
+  four: ' property',
+  five: ' values.'
+} 
 
 // for(var key in values) {
 //   console.log(values[key])
@@ -40,8 +40,12 @@
 */
 
 function showValues( obj ) {
-  //Code Here
-}
+  var newType = []
+  for(var key in obj){
+    newType.push(obj[key])
+  } 
+  return  newType.join('')
+};
 
 
 
@@ -55,7 +59,13 @@ function showValues( obj ) {
 
 //Code Here
 
-
+// function greaterThan10 (obj) {
+//   for(var key in obj){
+//     if (obj[key]>10){
+    
+//     }
+//   }
+// }
 
 ////////// PROBLEM 3 //////////
 
@@ -66,7 +76,13 @@ function showValues( obj ) {
 */
 
 //Code Here
-
+function double(obj){
+  for (var key in obj){
+   obj[key]= obj[key] * 2
+  } 
+  console.log(obj)
+  return obj
+};
 
 
 ////////// PROBLEM 4 //////////
